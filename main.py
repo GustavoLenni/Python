@@ -199,38 +199,97 @@
 #     print("------------")
 #     contador = contador+1
 
-caixa = []
+# caixa = []
 
-print("Fluxo de Caixa")
-print("Opção 1: Adicionar Receita")
-print("Opção 2: Adicionar Despesa")
-print("Digite outro número para finalizar")
-
-
-def transacao(opcao):
-    nome = str(input("Nome: "))
-    valor = float(input("Valor: "))
-    caixa.append({ 
-        "nome":nome,
-        "valor":valor,
-    })
-    print("----------------")
-
-while True:
-    opcao = int(input("Digite a Opção: "))
-
-    if opcao == 1 or opcao == 2:
-        transacao(opcao)
-    else:
-        break
+# print("Fluxo de Caixa")
+# print("Opção 1: Adicionar Receita")
+# print("Opção 2: Adicionar Despesa")
+# print("Digite outro número para finalizar")
 
 
-total = 0
-for i in caixa:
-    print("-------------")
-    print("Nome: ", i['nome'], "Valor R$: ", i['valor'])
-    total = total + i['valor']
-    print("Saldo Atual R$: ", total)
+# def transacao(opcao):
+#     nome = str(input("Nome: "))
+#     valor = float(input("Valor: "))
+#     caixa.append({ 
+#         "nome":nome,
+#         "valor":valor,
+#     })
+#     print("----------------")
+
+# while True:
+#     opcao = int(input("Digite a Opção: "))
+
+#     if opcao == 1 or opcao == 2:
+#         transacao(opcao)
+#     else:
+#         break
+
+
+# total = 0
+# for i in caixa:
+#     print("-------------")
+#     print("Nome: ", i['nome'], "Valor R$: ", i['valor'])
+#     total = total + i['valor']
+#     print("Saldo Atual R$: ", total)
+
+
+# Estrutura With
+
+# Sem o with 
+# arquivo = open("meu_arquivo.txt" ,"w")
+# # Abrindo o arquivo
+# # o "w" é de write ou seja para escrever no arquivo
+# # ou "r" que seria read para ler o arquivo
+# arquivo.write("Hello World")
+# # escrevendo "Hello World no Arquivo"
+# arquivo.close()
+# # Fechando o Arquivo
+
+# com o with
+# with open("meu_arquivo.txt", 'w') as arquivo:
+#     # O 'open("meu_arquivo.txt", 'w')' abre o arquivo no modo de escrita ('w' de write).
+#     # Se o arquivo não existir, ele será criado. Se já existir, o conteúdo será apagado.
+    
+#     # O 'with' garante que o arquivo será fechado automaticamente ao final do bloco.
+    
+#     arquivo.write("Olá Mundo")  # Escreve "Olá Mundo" no arquivo.
+    
+#     # Após sair do bloco 'with', o arquivo será fechado automaticamente.
+
+#Utilizando para ler o arquivo 
+# with open("meu_arquivo.txt", 'r') as arquivo:
+#     print(arquivo.read())
 
 
 
+# Classes e Programação orientada a Objetos
+
+# class Vendedor():
+#     def __init__(self, nome):
+#         self.nome = nome
+    
+#     def vendeu(self,vendas):
+#         self.vendas = vendas
+    
+#     def meta(self,meta):
+#         if self.vendas >= meta:
+#             print(self.nome, "Bateu A meta Com o total de:", self.vendas, "Vendas")
+#         else:
+#             print(self.nome, "Não Bateu a meta de: ", meta, "Vendas")
+
+# vendedores = []
+# for x in range(2):
+#     vendedor1 = Vendedor(input("Nome: "))
+#     vendedor1.vendeu(int(input("Vendas: ")))
+#     vendedor1.meta(int(input("Meta: ")))
+#     vendedores.append(vendedor1)
+
+# print("Tivemos o total de: ", len(vendedores), "Vendedores")
+
+
+class ControleRemoto:
+    def __init__(self,cor,altura,profundidade,largura):
+        self.cor = cor
+        self.altura = altura
+        self.profundidade = profundidade
+        self.largura = largura
