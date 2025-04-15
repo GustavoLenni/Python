@@ -19,27 +19,27 @@
 
 
 # Ler e analisar arquivo csv 
-# import pandas as pd
+import pandas as pd
 
-# df = pd.read_csv("vendas.csv")
+df = pd.read_csv("vendas.csv")
 
-# # filtrando dados 
+# filtrando dados 
 # df_celular = df[df["Produto"] == "Celular Android1"]
 
-# total_vendas = df.groupby("Produto")[["Quantidade"]].sum().reset_index()
-# # total de vendas
+total_vendas = df.groupby("Produto")[["Quantidade"]].sum().reset_index()
+# total de vendas
 # df_total_vendas = total_vendas =  total_vendas.reset_index()
 
 # df_total_vendas.to_csv("Total_de_vendas.csv", index=False)
 
 
-# soma_vendas = df["Quantidade"].sum()
-# # soma das vendas
+soma_vendas = df["Quantidade"].sum()
+# soma das vendas
 
-# # salvando os resultados em um novo csv 
+# salvando os resultados em um novo csv 
 
 
-# print(df_total_vendas)
+print(soma_vendas)
 # head() é usado para visualizar os primeiros registro do arquivo 
 # se quisesse ver todos os registro do arquivo poderia usar o proprio df normal
 
